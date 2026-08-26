@@ -1,0 +1,10 @@
+{
+  "bunny": {
+    "TYPE": "BUNNY_DNS",
+    "api_key": "<bunny-api-key>"
+  },
+  "cloudflare": {
+    "TYPE": "CLOUDFLAREAPI",
+    "apitoken": "<cloudflare-api-key>"
+  }
+}
