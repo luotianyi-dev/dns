@@ -11,12 +11,14 @@ require("./lib.js");
 // cloudflare:luotianyi.dev
 D("luotianyi.dev", REG_NONE, DnsProvider(DSP_CF_LTY), TTL_DEFAULT,
   // Site Verification
+  CAA("@", "issue",     "pki.goog"),
+  CAA("@", "issuewild", "pki.goog"),
   TXT("_github-pages-challenge-luotianyi-dev", "09e40d1fa235cfdba1e74f2d90ba4d"),
   // Google Workspace - luotianyi.dev
   MX ("@", 1, "smtp.google.com."),
   TXT("@", "v=spf1 include:_spf.google.com include:spf.protection.outlook.com -all"),
   TXT("@", COMMON_DMARC),
-  TXT("google._domainkey", "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnAeJDreAJmXHMYI5OYtSUlopWOz4bchQPfo7qTmqZjdKr/nU1DPic30l9zarSNx8vv+6QKNVWUFULqfFRfUDllgKt4Sxh0K9BOERkk8Dqn7O4o/xUlcgV+E8mopcD4MB62+BQsmn1DTObNnepy4CAF7FlxAXZPXyo+dknT1KlwF9LsYjhI8Frw1xeHJA1LcxykX90c9ppG8zNzwAUjTlyzCSVcqsLikMccI4V7RLYk2colPBVO9o3oke+BNUmdxYbkZdUAb6jAoDultjrCrnZx8muWyOr06+0/S9SGUHd1qaWSXO4mtJnzji+0vzRxgl0ci4PghruUjW6Jy66/uYaQIDAQAB"),
+  TXT("google._domainkey", "v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnAeJDreAJmXHMYI5OYtSUlopWOz4bchQPfo7qTmqZjdKr/nU1DPic30l9zarSNx8vv+6QKNVWUFULqfFRfUDllgKt4Sxh0K9BOERkk8Dqn7O4o/xUlcgV+E8mopcD4MB62+BQsmn1DTObNnepy4CAF7FlxAVZPXyo+dknT1KlwF9LsYjhI8Frw1xeHJA1LcxykX90c9ppG8zNzwAUjTlyzCSVcqsLikMccI4V7RLYk2colPBVO9o3oke+BNUmdxYbkZdUAb6jAoDultjrCrnZx8muWyOr06+0/S9SGUHd1qaWSXO4mtJnzji+0vzRxgl0ci4PghruUjW6Jy66/uYaQIDAQAB"),
   CNAME("mail",   "ghs.googlehosted.com."),
   CNAME("groups", "ghs.googlehosted.com."),
   CNAME("cal",    "ghs.googlehosted.com."),

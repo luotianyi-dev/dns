@@ -5,6 +5,10 @@ var COMMON_TXT   = [
 ];
 var WEBHOST_VERCEL = [
   A     ("@",   "76.76.21.21"),
+  CAA   ("@",   "issue", "letsencrypt.org"),
+  CAA   ("@",   "issue", "pki.goog"),
+  CAA   ("@",   "issue", "sectigo.com"),
+  CAA   ("@",   "issue", "globalsign.com"),
   CNAME ("www", "cname-china.vercel-dns.com."),
 ];
 
